@@ -1,0 +1,10 @@
+@use "../../../app/styles/variables" as v;
+
+.login-layout {
+  width: 100%;
+  height: 100%;
+  background-color: v.$white;
+  font-family: v.$secondary-font;
+  max-width: 90rem;
+  margin: 0 auto;
+}

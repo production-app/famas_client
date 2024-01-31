@@ -1,0 +1,143 @@
+@use "../../app/styles/variables" as v;
+@use "../../app/styles/mixins" as m;
+
+.login {
+  width: 100%;
+  padding-bottom: 4rem;
+
+  @media screen and (min-width: 1024px) {
+    min-height: 100vh;
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  &-image-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    @media screen and (min-width: 1024px) {
+      width: 51.5%;
+      padding: 6.625rem 6rem;
+    }
+  }
+
+  &-logo {
+    width: 8rem;
+
+    @media screen and (min-width: 1024px) {
+      width: 10.85rem;
+    }
+  }
+
+  &-image-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 2.5rem;
+    @include m.centerElement;
+
+    @media screen and (min-width: 1024px) {
+      margin-top: 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 24rem;
+
+      @media screen and (min-width: 1024px) {
+        max-width: 32rem;
+      }
+    }
+  }
+
+  &-form {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: v.$white;
+    box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+
+    @media screen and (min-width: 1024px) {
+      width: 48.5%;
+      margin-top: -2rem;
+      padding: 0 0 0 4.25rem;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: -2.5rem;
+      padding: 0 0 0 6.25rem;
+    }
+
+    &-caption {
+      width: 100%;
+      text-align: center;
+
+      @media screen and (min-width: 1024px) {
+        text-align: left;
+      }
+
+      h1 {
+        color: v.$primary-color;
+        font-size: v.$font-4xl;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        line-height: 55px;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        color: v.$text-color;
+        font-size: v.$font-lg;
+        font-weight: 400;
+        line-height: 27px;
+      }
+    }
+
+    &-container {
+      width: 100%;
+      margin-top: 2.25rem;
+      @include m.centerElement;
+
+      @media screen and (min-width: 768px) {
+        width: 70%;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 85%;
+        margin: 3.25rem auto 0 0;
+      }
+
+      @media screen and (min-width: 1280px) {
+        width: 75%;
+      }
+
+      form {
+        width: 100%;
+
+        .password-input-icon {
+          color: v.$secondary-color;
+          font-size: v.$font-xs;
+          font-weight: 600;
+          text-align: center;
+          text-transform: uppercase;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+        }
+
+        .forgot-password-button {
+          color: v.$secondary-color;
+          font-size: v.$font-xs;
+          font-weight: 600;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          margin-bottom: 1.875rem;
+        }
+      }
+    }
+  }
+}
